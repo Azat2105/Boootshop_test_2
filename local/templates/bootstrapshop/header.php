@@ -37,38 +37,25 @@ use Bitrix\Main\Page\Asset;
     <div id="panel"><?php $APPLICATION->ShowPanel(); ?> </div>
     <div id="header">
         <div class="container">
-                        <?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket.line", "cart_items", Array(
-	"PATH_TO_BASKET" => SITE_DIR."personal/cart/",	// Страница корзины
-		"PATH_TO_PERSONAL" => SITE_DIR."personal/",	// Страница персонального раздела
-		"SHOW_PERSONAL_LINK" => "N",	// Отображать персональный раздел
-		"SHOW_NUM_PRODUCTS" => "Y",	// Показывать количество товаров
-		"SHOW_TOTAL_PRICE" => "Y",	// Показывать общую сумму по товарам
-		"SHOW_PRODUCTS" => "N",	// Показывать список товаров
-		"POSITION_FIXED" => "N",	// Отображать корзину поверх шаблона
-		"SHOW_AUTHOR" => "Y",	// Добавить возможность авторизации
-		"PATH_TO_REGISTER" => SITE_DIR."login/",	// Страница регистрации
-		"PATH_TO_PROFILE" => SITE_DIR."personal/",	// Страница профиля
-	),
-	false
-);?>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                    "AREA_FILE_SHOW" => "file",
+                    "PATH" => DEFAULT_TEMPLATE_PATH."/includes/sale.php"
+                )
+            );?>
             <!-- Navbar ================================================== -->
 
-            <?$APPLICATION->IncludeComponent("bitrix:menu", "top_menu", Array(
-	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-		"CHILD_MENU_TYPE" => "top",	// Тип меню для остальных уровней
-		"DELAY" => "N",	// Откладывать выполнение шаблона меню
-		"MAX_LEVEL" => "1",	// Уровень вложенности меню
-		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
-			0 => "",
-		),
-		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
-		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-	),
-	false
-);?>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                    "AREA_FILE_SHOW" => "file",
+                    "PATH" => DEFAULT_TEMPLATE_PATH."/includes/menu.php"
+                )
+            );?>
+
             <div class="col-4">
                 <div id="sidebar"  class="span3" style="
                 <?
@@ -259,7 +246,7 @@ use Bitrix\Main\Page\Asset;
                         } );
                     </script>
                     <div class="thumbnail">
-                        <img src="/upload/iblock/31a/cru847hm7hut6n5q6zzkt6s32tau06iy.jpg" alt="Bootshop panasonoc New camera">
+                        <img src="/upload/iblock/fe0/47108wugmvxrglx7reydgww19d6odlr9.jpg" alt="Bootshop panasonoc New camera">
                         <div class="caption">
                             <h5>Panasonic</h5>
                             <h4 style="text-align:center"><a class="btn" href="electronics/cameras/fujifilm-finepix-s2950-digital-camera6/">
