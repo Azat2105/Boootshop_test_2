@@ -11,9 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-//$arParams ["IBLOCK_TYPE"];
-//$arResult["ELEMENT_CNT"]
-//dd($arResult);
 $cnt=0;
 ?>
 <h6 style="font-size: 12px !important;" class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-active ui-state-active" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="true" aria-expanded="true" tabindex="0">

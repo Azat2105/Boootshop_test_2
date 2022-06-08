@@ -54,7 +54,7 @@ $currencyList = '';
 ?>
 <div class="<?if($_SERVER["REQUEST_URI"]==="/specials-offer/" || $_SERVER["REQUEST_URI"]==="/specials-offer/"."?".$_SERVER["QUERY_STRING"])echo "offset-3 col";?>">
     <div class="span9 w-100 ">
-        <div class="<?if($_SERVER["REQUEST_URI"]==="/electronics/". trim($_SERVER['QUERY_STRING'],"&"))echo "d-none";?>">
+        <div class="<?if($_SERVER["REQUEST_URI"]==="/electronics/" || $_SERVER["REQUEST_URI"]==="/electronics/". trim($_SERVER['QUERY_STRING'],"&"))echo "d-none";?>">
         <h3> Products Name <small class="pull-right"> 40 products are available </small></h3>
         <hr class="soft">
         <p>
@@ -142,7 +142,7 @@ $currencyList = '';
 <?php
 if ($showBottomPager){
 	?>
-        <div class="<?if($_SERVER["REQUEST_URI"]==="/electronics/". trim($_SERVER['QUERY_STRING'],"&"))echo "d-none";?>">
+        <div class="<?if($_SERVER["REQUEST_URI"]==="/electronics/" || $_SERVER["REQUEST_URI"]==="/electronics/". trim($_SERVER['QUERY_STRING'],"&"))echo "d-none";?>">
 	<div  data-pagination-num="<?=$navParams['NavNum']?>">
 		<!-- pagination-container -->
 		<?=$arResult['NAV_STRING']?>

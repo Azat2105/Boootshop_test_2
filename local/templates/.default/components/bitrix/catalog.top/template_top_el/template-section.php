@@ -13,6 +13,7 @@ global $APPLICATION;
 
 <div class="bx_catalog_top_home col<? echo $arParams['LINE_ELEMENT_COUNT']; ?>">
 <?
+
 foreach ($arResult['ITEMS'] as $key => $arItem)
 {
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strElementEdit);
